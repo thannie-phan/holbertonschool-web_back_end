@@ -3,4 +3,6 @@
 
 
 def floor(n: float) -> int:
+    """floor is the number before the ."""
+
     return int(n)
