@@ -50,16 +50,16 @@ class Server:
         return page if page else []
 
     def get_hyper(self, page: int, page_size: int) -> Dict:
-            """
-            returns a dictionary containing some key-value pair
-            """
-            data = self.get_page(page, page_size)
-            total_pages = round(len(self.__dataset) / page_size)
-            return {
-                "page_size": len(data),
-                "page": page,
-                "data": self.get_page(page, page_size),
-                "next_page": None if page > total_pages else page + 1,
-                "prev_page": None if page > 1 else page - 1,
-                "total_pages": total_pages,
-            }
+        """
+        returns a dictionary containing some key-value pair
+        """
+        data = self.get_page(page, page_size)
+        total_pages = math.ceil(len(self.__dataset) / page_size)
+        return {
+            "page_size": len(data),
+            "page": page,
+            "data": self.get_page(page, page_size),
+            "next_page": None if page == total_pages else page + 1,
+            "prev_page": None if page == 1 else page - 1,
+            "total_pages": total_pages,
+        }
