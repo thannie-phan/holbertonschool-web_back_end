@@ -1,0 +1,2 @@
+// Delete all 'Holberton school' documents
+db.school.deleteMany({ "name": "Holberton school" }) // delete only delete first one, deleteOne only delete one
