@@ -1,0 +1,2 @@
+//  to see the school table and field name
+db.school.find()
