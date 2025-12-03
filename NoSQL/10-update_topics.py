@@ -5,6 +5,7 @@
 def update_topics(mongo_collection, name, topics):
     """Update the topics of a school document by name."""
     # Update topics field for all documents matching the name
+    # eg Selects documents where the "name" field equals the name argument.
     return mongo_collection.update_many(
         {"name": name},
         {"$set": {"topics": topics}}
