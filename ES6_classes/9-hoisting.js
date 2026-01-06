@@ -1,4 +1,4 @@
-export class holbertonClass {
+export class HolbertonClass {
     constructor(year, location) {
         this._year = year;
         this._location = location;
@@ -15,28 +15,28 @@ export class holbertonClass {
 
 
 export class StudentHolberton {
-    constructor(firstName, lastName, holbertonClass) {
+    constructor(firstName, lastName, HolbertonClass) {
         this._firstName = firstName;
         this._lastName = lastName;
-        this._holbertonClass = holbertonClass;
+        this._HolbertonClass = HolbertonClass;
     }
 
     get fullName() {
         return `${this._firstName} ${this._lastName}`;
     }
 
-    get holbertonClass() {
-        return this._holbertonClassholbertonClass;
+    get HolbertonClass() {
+        return this._HolbertonClass;
     }
 
     get fullStudentDescription() {
-        return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
+        return `${this._firstName} ${this._lastName} - ${this._HolbertonClass.year} - ${this._HolbertonClass.location}`;
     }
 }
 
 // now declare instances of HolbertonClass
-const class2019 = new holbertonClass(2019, 'San Francisco');
-const class2020 = new holbertonClass(2020, 'San Francisco');
+const class2019 = new HolbertonClass(2019, 'San Francisco');
+const class2020 = new HolbertonClass(2020, 'San Francisco');
 
 // now declare instances of StudentHolberton
 const student1 = new StudentHolberton('Guillaume', 'Salva', class2020);
