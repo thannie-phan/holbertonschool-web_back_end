@@ -1,5 +1,5 @@
-import initializeRooms from './1-make_classrooms.js';
+import getListStudentIds from "./1-get_list_student_ids.js";
+import getListStudents from "./0-get_list_students.js";
 
-console.log(initializeRooms());
-
-
+console.log(getListStudentIds("hello"));
+console.log(getListStudentIds(getListStudents()));
