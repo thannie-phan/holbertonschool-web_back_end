@@ -1,6 +1,6 @@
-import Pricing from './4-pricing.js';
-import Currency from './3-currency.js';
+import getListStudents from "./0-get_list_students.js";
+import updateStudentGradeByCity from "./4-update_grade_by_city.js";
 
-const p = new Pricing(100, new Currency("EUR", "Euro"))
-console.log(p);
-console.log(p.displayFullPrice());
+console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }, { studentId: 1, grade: 86 }]));
+
+console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }]));
