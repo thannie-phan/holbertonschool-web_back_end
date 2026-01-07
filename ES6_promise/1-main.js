@@ -1,5 +1,4 @@
-import getListStudentIds from "./1-get_list_student_ids.js";
-import getListStudents from "./0-get_list_students.js";
+import getFullResponseFromAPI from './1-promise';
 
-console.log(getListStudentIds("hello"));
-console.log(getListStudentIds(getListStudents()));
+console.log(getFullResponseFromAPI(true));
+console.log(getFullResponseFromAPI(false));
