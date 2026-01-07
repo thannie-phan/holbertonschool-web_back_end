@@ -1,20 +1,6 @@
-import HolbertonCourse from "./2-hbtn_course.js";
+import getListStudents from "./0-get_list_students.js";
+import getStudentsByLocation from "./2-get_students_by_loc.js";
 
-const c1 = new HolbertonCourse("ES6", 1, ["Bob", "Jane"])
-console.log(c1.name);
-c1.name = "Python 101";
-console.log(c1);
+const students = getListStudents();
 
-try {
-    c1.name = 12;
-} 
-catch(err) {
-    console.log(err);
-}
-
-try {
-    const c2 = new HolbertonCourse("ES6", "1", ["Bob", "Jane"]);
-}
-catch(err) {
-    console.log(err);
-}
+console.log(getStudentsByLocation(students, 'San Francisco'));
