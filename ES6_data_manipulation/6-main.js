@@ -1,7 +1,3 @@
-import SkyHighBuilding from './6-sky_high.js';
+import setFromArray from "./6-set.js";
 
-const building = new SkyHighBuilding(140, 60);
-console.log(building.sqft);
-console.log(building.floors);
-console.log(building.evacuationWarningMessage());
-
+console.log(setFromArray([12, 32, 15, 78, 98, 15]));
