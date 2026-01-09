@@ -1,5 +1,4 @@
-import cleanSet from "./8-clean_set.js";
+import divideFunction from './8-try';
 
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
-
+console.log(divideFunction(10, 2));
+console.log(divideFunction(10, 0));
