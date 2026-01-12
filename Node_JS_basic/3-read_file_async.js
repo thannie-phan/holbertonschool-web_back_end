@@ -1,9 +1,11 @@
+// create a promise, read then go away then show end result after process reading
+
 const fs = require('fs'); // fs or filesystem is a built in node.js module. require loads this module
 
 function countStudents(path) { // path is the filepath to the csv file
-  return new Promise((resolve, reject) => {
-    fs.readFile(path, 'utf8', (error, data) => {
-      if (error) {
+  return new Promise((resolve, reject) => { // return a promise
+    fs.readFile(path, 'utf8', (error, data) => { // read file
+      if (error) { // if error reject and return
         reject(new Error('Cannot load the database'));
         return;
       }
