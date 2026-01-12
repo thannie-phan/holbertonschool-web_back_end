@@ -7,7 +7,6 @@ function countStudents(path) { // path is the filepath to the csv file
         reject(new Error('Cannot load the database'));
         return;
       }
-    
       // remove empty lines at start/end and break text into lines using \n
       const lines = data.trim().split('\n');
 
@@ -20,24 +19,22 @@ function countStudents(path) { // path is the filepath to the csv file
 
       // go thorugh each student. line is one row from the csv
       students.forEach((line) => {
-          const [firstname, , , field] = line.split(','); // ignore everything in between first name and field and only split by first name and field
-
-          if (!fields[field]) { // if field doesn't exist yet
+        const [firstname, , , field] = line.split(','); // ignore everything in between first name and field and only split by first name and field
+        if (!fields[field]) { // if field doesn't exist yet
           fields[field] = []; // create an empty array for the field
-          }
-          fields[field].push(firstname); // add name to the correct field
+        }
+        fields[field].push(firstname); // add name to the correct field
       });
 
       // // oop through each field and format the list of student names
       Object.keys(fields).forEach((field) => {
-          const list = fields[field].join(', '); // convert the fields[field] array into 1 string using , . without this, js auto convert array into string but default separator is comma only and would be missing space after commas so it wouldn't look like the eg shown in the exercise
-          console.log(
+        const list = fields[field].join(', '); // convert the fields[field] array into 1 string using , . without this, js auto convert array into string but default separator is comma only and would be missing space after commas so it wouldn't look like the eg shown in the exercise
+        console.log(
           `Number of students in ${field}: ${fields[field].length}. List: ${list}`,
-          );
+        );
       });
-      
       resolve();
     });
-});
+  });
 }
-      module.exports = countStudents;
+module.exports = countStudents;
