@@ -8,9 +8,7 @@ const app = http.createServer((req, res) => { // create server that require and 
 
   if (req.url === '/') {
     res.end('Hello Holberton School!');
-  }
-
-  else if (req.url === '/students') {
+  } else if (req.url === '/students') {
     res.write('This is the list of our students\n');
 
     fs.readFile(database, 'utf8', (error, data) => { // read file, copy everything from here to end from file 3
