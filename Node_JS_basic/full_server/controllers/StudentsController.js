@@ -10,9 +10,8 @@ class StudentsController {
       .then((fields) => {
         let response = 'This is the list of our students';
 
-        const sortedFields = Object.keys(fields).sort((a, b) =>
-          a.toLowerCase().localeCompare(b.toLowerCase())
-        );
+        const sortedFields = Object.keys(fields)
+          .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
         for (const field of sortedFields) {
           response += `\nNumber of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`;
@@ -45,4 +44,3 @@ class StudentsController {
 }
 
 export default StudentsController;
-
